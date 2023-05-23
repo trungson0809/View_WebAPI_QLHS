@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\View_QLHS.props" />
+</Project>

@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "Student";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/scripts/student.js"></script>
+<div>
+    <div >
+        <h2 id="title">Quản lý học sinh</h2>
+        <hr />
+    </div>
+
+    <div class="row">
+        <div class=" col-5 bg-info p-3 mx-2">
+            <div>
+                <div class="col-md-12"> Tên </div>
+                <div class="col-md-12">
+                    <input type="text" class="form-control" id="studentName" />
+                </div>
+
+            </div>
+            <div class="mt-2">
+                <div class="col-md-12"> Lớp </div>
+                <div class="col-md-12">
+                    <input type="number" class="form-control" id="studentClassId" />
+                </div>
+            </div>
+
+            <div class="form-group row mt-3 text-center">
+                <div class="col-sm-12" style="font-size:25px">
+                    <button class="btn btn-primary btn-lg " onclick="addStudent()" id="btnAddStudent"> Thêm mới </button>
+                    <button class="btn btn-warning btn-lg " id="btnEditStudent"> Cập nhật </button>
+                    <a href="~/Home/Index" class="btn  btn-secondary btn-lg ">Tải lại</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-6  bg-info p-3 mx-2">
+            <div class="col-md-12">
+                <h4>Khung tìm kiếm</h4>
+            </div>
+            <div class="col-md-12 mt-3">
+                <select type="text" class="col-sm-9" id="txtSearchStudentByClassId"></select>
+                <button class="col-sm-2" id="btnSearchStudentByClassId"> Submit </button>
+            </div>
+            <div class="my-3 col-md-12">
+                <input class="col-sm-9" type="text" placeholder="Nhập tên.." id="txtSearchStudentByName" />
+                <button class="col-sm-2" id="btnSearchStudentByName"> Submit </button>
+            </div>
+            <div class ="col-md-12">
+                <input class="col-sm-9" type="text" placeholder="Nhập học lực.." id="txtSearchStudentByRank" />
+                <button class="col-sm-2" id="btnSearchStudentByRank"> Submit </button>
+            </div>         
+        </div>
+    </div>
+    <div class="col">
+        <button class="btn btn-link ml-0" id="btnDownloadExport" disabled>Download </button>
+    </div>
+
+    <div class="justify-content-center">
+        @*Table*@
+        <table class="table table-hover" style="overflow:hidden; white-space: nowrap; ">
+            <thead>
+                <tr id="studentTitleColumn">
+                    
+                    <th>
+                        Number
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Class
+                    </th>
+            </thead>
+
+            <tbody id="studentData"> </tbody>
+        </table>
+    </div>
+
+</div>

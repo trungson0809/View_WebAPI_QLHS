@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\Scripts\class.js" />
+    <Content Remove="wwwroot\Scripts\course.js" />
+    <Content Remove="wwwroot\Scripts\result.js" />
+    <Content Remove="wwwroot\Scripts\subject.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Scripts\result.js" />
+    <None Include="wwwroot\Scripts\course.js" />
+    <None Include="wwwroot\Scripts\subject.js" />
+    <None Include="wwwroot\Scripts\class.js" />
+    <None Include="wwwroot\Scripts\student.js" />
+  </ItemGroup>
+
+</Project>
